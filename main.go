@@ -26,6 +26,7 @@ func getUsers(c *gin.Context)  {
     db.Find(&users)
     c.JSON(http.StatusOK, gin.H{
         "data": users,
+		"code": 200 ,
     })
 }
 
@@ -67,6 +68,7 @@ func updateUser(c *gin.Context)  {
         db.Save(&user)
         c.JSON(http.StatusOK, gin.H{
             "data": user,
+			"code": 200 ,
         })
     }
 }
